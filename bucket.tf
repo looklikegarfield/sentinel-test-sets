@@ -6,7 +6,6 @@ resource "google_storage_bucket" "auto-expire" {
   labels = {
 
     terraform = "true"
-    env       = "tst"
     cost      = "nothing"
   }
 

@@ -13,7 +13,6 @@ resource "google_compute_instance" "default" {
 
   labels = {
 
-    env       = "tst"
     terraform = "true"
 
   }
