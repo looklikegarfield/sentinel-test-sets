@@ -1,0 +1,22 @@
+{
+	"records": [
+		{
+			"key": "enforce-mandatory-labels",
+			"source": "./enforce-mandatory-labels.sentinel",
+			"sourceSum": "",
+			"dest": "F:/8kmiles_Laptop/Desktop/desktops-8kmiles laptop/GitHub/sentinel-test-sets/enforce-mandatory-labels.sentinel"
+		},
+		{
+			"key": "restrict-gce-machine-type",
+			"source": "./restrict-gce-machine-type.sentinel",
+			"sourceSum": "",
+			"dest": "F:/8kmiles_Laptop/Desktop/desktops-8kmiles laptop/GitHub/sentinel-test-sets/restrict-gce-machine-type.sentinel"
+		},
+		{
+			"key": "enforce-mandatory-dataproc",
+			"source": "./enforce-mandatory-labels-dataproc.sentinel",
+			"sourceSum": "",
+			"dest": "F:/8kmiles_Laptop/Desktop/desktops-8kmiles laptop/GitHub/sentinel-test-sets/enforce-mandatory-labels-dataproc.sentinel"
+		}
+	]
+}
