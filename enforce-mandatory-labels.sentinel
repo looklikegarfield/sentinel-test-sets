@@ -13,7 +13,7 @@ import "tfplan/v2" as tfplan
 mandatory_labels = ["terraform", "env"]
 
 # Get all GCE compute instances
-allGCEInstances = plan.find_resources("google_compute_instance", "google_dataproc_cluster", "google_storage_bucket")
+allGCEInstances = plan.find_resources("google_compute_instance")
 
 # Filter to GCE compute instances with violations
 # Warnings will be printed for all violations since the last parameter is true
