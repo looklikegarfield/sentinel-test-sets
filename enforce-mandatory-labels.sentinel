@@ -7,7 +7,6 @@
 # Import common-functions/tfplan-functions/tfplan-functions.sentinel
 # with alias "plan"
 import "tfplan-functions" as plan
-import "tfplan/v2" as tfplan
 
 # List of mandatory labels
 mandatory_labels = ["terraform", "env"]
@@ -24,34 +23,3 @@ violatingGCEInstances = plan.filter_attribute_not_contains_list(allGCEInstances,
 main = rule {
   length(violatingGCEInstances["messages"]) is 0
 }
-
-
-
-#get_resources_all_modules = func(type) {
-# resources = []
-# for tfplan.module_paths as path {
-#  named_and_counted_resources = tfplan.module(path).resources[type] else {}
-#  for named_and_counted_resources as _, instances {
-#   for instances as _, body {
-#    append(resources, body)
-#   }
-#  }
-# }
-# return resources
-#}
-#
-## List of mandatory labels
-#mandatory_labels = ["terraform", "env"]
-#
-## Get all GCE compute instances
-#allGCEInstances = plan.find_resources("*")
-#
-## Filter to GCE compute instances with violations
-## Warnings will be printed for all violations since the last parameter is true
-#violatingGCEInstances = plan.filter_attribute_not_contains_list(allGCEInstances,
-#                        "labels", mandatory_labels, true)
-#
-## Main rule
-#main = rule {
-#  length(violatingGCEInstances["messages"]) is 0
-#}
