@@ -1,6 +1,6 @@
-module "tfplan-functions" {
-    source = "./common-functions/tfplan-functions/tfplan-functions.sentinel"
-}
+#module "tfplan-functions" {
+#    source = "./common-functions/tfplan-functions/tfplan-functions.sentinel"
+#}
 
 module "tfstate-functions" {
     source = "./common-functions/tfstate-functions/tfstate-functions.sentinel"
@@ -24,3 +24,13 @@ policy "enforce-mandatory-dataproc" {
     source = "./enforce-mandatory-labels-dataproc.sentinel"
     enforcement_level = "advisory"
 }
+
+mock "tfplan/v2" {
+  module {
+    source = "./mock-tfplan-v2.sentinel"
+  }
+}
+
+module "tfplan-functions" {
+    source = "./tfplan-functions.sentinel"
+} 

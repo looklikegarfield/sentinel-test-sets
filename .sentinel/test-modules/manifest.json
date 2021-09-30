@@ -1,0 +1,16 @@
+{
+	"records": [
+		{
+			"key": "test\\enforce-mandatory-labels\\fail\\tfplan-functions",
+			"source": "../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "F:/8kmiles_Laptop/Desktop/desktops-8kmiles laptop/GitHub/sentinel-test-sets/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test\\enforce-mandatory-labels\\pass\\tfplan-functions",
+			"source": "../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "F:/8kmiles_Laptop/Desktop/desktops-8kmiles laptop/GitHub/sentinel-test-sets/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		}
+	]
+}

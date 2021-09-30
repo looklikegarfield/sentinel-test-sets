@@ -13,7 +13,7 @@ import "tfplan/v2" as tfplan
 mandatory_labels = ["terraform", "env"]
 
 # Get all GCE compute instances
-allGCEInstances = plan.find_resources("google_compute_instance")
+allGCEInstances = plan.find_resources("google_compute_instance", "google_dataproc_cluster", "google_storage_bucket")
 
 # Filter to GCE compute instances with violations
 # Warnings will be printed for all violations since the last parameter is true
@@ -38,4 +38,20 @@ main = rule {
 #  }
 # }
 # return resources
+#}
+#
+## List of mandatory labels
+#mandatory_labels = ["terraform", "env"]
+#
+## Get all GCE compute instances
+#allGCEInstances = plan.find_resources("*")
+#
+## Filter to GCE compute instances with violations
+## Warnings will be printed for all violations since the last parameter is true
+#violatingGCEInstances = plan.filter_attribute_not_contains_list(allGCEInstances,
+#                        "labels", mandatory_labels, true)
+#
+## Main rule
+#main = rule {
+#  length(violatingGCEInstances["messages"]) is 0
 #}
