@@ -1,6 +1,6 @@
 resource "google_compute_instance" "default" {
   name         = "test"
-  machine_type = "e2-micro"
+  machine_type = "e2-medium"
   zone         = "us-central1-a"
 
   tags = ["terraform", "tst"]
